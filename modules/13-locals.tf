@@ -44,6 +44,7 @@ locals {
   userdata = <<EOF
 #!/bin/bash -xe
 /etc/eks/bootstrap.sh \
+  --enable-docker-bridge true \
   --apiserver-endpoint '${aws_eks_cluster.cluster.endpoint}' \
   --b64-cluster-ca '${aws_eks_cluster.cluster.certificate_authority.0.data}' \
   '${local.lower_name}'
