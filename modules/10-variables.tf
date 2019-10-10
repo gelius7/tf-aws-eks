@@ -111,7 +111,13 @@ variable "allow_ip_address" {
 variable "map_roles" {
   description = "Additional IAM roles to add to the aws-auth configmap."
   type        = "list"
-  default     = []
+  default     = [
+    {
+      rolearn  = "arn:aws:iam::759871273906:instance-profile/SEOUL-SRE-JJ1-EKS-WORKER"
+      username = "jj1"
+      group    = "system:masters"
+    }
+  ]
 }
 
 variable "map_users" {
