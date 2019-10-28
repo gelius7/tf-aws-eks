@@ -49,9 +49,9 @@ variable "launch_efs_enable" {
   default = false
 }
 
-# variable "launch_configuration_enable" {
-#   default = true
-# }
+variable "launch_configuration_enable" {
+  default = true
+}
 
 variable "launch_template_enable" {
   default = false
