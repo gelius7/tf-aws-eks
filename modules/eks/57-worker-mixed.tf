@@ -41,9 +41,9 @@ resource "aws_autoscaling_group" "worker-mixed" {
 
   vpc_zone_identifier = var.subnet_ids
 
-  target_group_arns = [
-    aws_lb_target_group.tg_http.arn,
-  ]
+  # target_group_arns = [
+  #   aws_lb_target_group.tg_http.arn,
+  # ]
 
   mixed_instances_policy {
     instances_distribution {
